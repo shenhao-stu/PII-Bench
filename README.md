@@ -10,13 +10,13 @@
 English | **[中文](README_zh.md)**
 
 Official dataset and evaluation repository for the ACL 2026 paper:
-> **PII-Bench: Evaluating Query-Aware Privacy Protection Systems**
-> Hao Shen, Zhouhong Gu, HaoKai Hong, Weili Han\*, Hongfeng Chai
-> *Institute of Fintech & Laboratory of Data Analytics and Security, Fudan University*
 
-**Official Dataset Mirrors:**
-- **HuggingFace:** https://huggingface.co/datasets/shenhao/PII-Bench
-- **ModelScope (China Mirror):** https://modelscope.cn/datasets/shenhao23/PII-Bench
+- **Paper:** *PII-Bench: Evaluating Query-Aware Privacy Protection Systems* (ACL 2026)
+- **Authors:** Hao Shen<sup>1,2</sup>, Zhouhong Gu<sup>3</sup>, HaoKai Hong<sup>1</sup>, Weili Han<sup>1,2\*</sup>, Hongfeng Chai<sup>1</sup>
+- **Affiliations:** <sup>1</sup>Institute of Fintech, Fudan University; <sup>2</sup>Laboratory of Data Analytics and Security, Fudan University; <sup>3</sup>Fudan University
+- **Official Dataset Mirrors:**
+  - **HuggingFace (Parquet):** https://huggingface.co/datasets/shenhao/PII-Bench
+  - **ModelScope (Parquet, China Mirror):** https://modelscope.cn/datasets/shenhao23/PII-Bench
 
 > **Iterative Updates Notice:** PII-Bench is actively maintained and **will be iteratively updated** with future refinements and potential additional splits (such as `PII-Real` in a future release). The **`data/paper_exact/`** directory (and `paper_exact` Hub config) remains permanently frozen to guarantee **0.0000** bit-exact reproducibility of all ACL 2026 paper results.
 
@@ -86,9 +86,10 @@ See [CHANGELOG_DATA_CLEANING.md](CHANGELOG_DATA_CLEANING.md) for the complete ru
 | **PII-Multi** | 1,228 | 614 | 2.00 | 652.65 | 13.14 | 236.21 | 2.06 | 16,136 / 16,136 |
 | **PII-Hard**\* | 200 | 200 | 1.43 | 746.08 | 9.18 / 9.17 | 222.66 | 2.06 | 1,835 / 1,834 |
 | **PII-Distract** | 200 | 200 | 7.47 | 4,403.64 | 51.05 / 51.08 | 859.68 / 859.69 | 5.82 | 10,210 / 10,211 |
-| **All** | **2,842** | **1,421** | **1.92** | **1,026.07** | **13.19** | **268.45** | **2.28** | **37,481 / 37,484** |
+| **All** | **2,842** | **1,421\*\*** | **1.92** | **1,026.07** | **13.19** | **268.45** | **2.28** | **37,481 / 37,484** |
 
-\* `PII-Hard` is an overlapping challenging subset drawn from `PII-Single` (114) and `PII-Multi` (86) via `data/paper_exact/hard_samples_line_numbers.json`.
+- \* `PII-Hard` is an overlapping challenging subset drawn from `PII-Single` (114) and `PII-Multi` (86) via `data/paper_exact/hard_samples_line_numbers.json`.
+- \*\* 607 (`single`) + 614 (`multi`) + 200 (`distract`) = 1,421 non-overlapping unique descriptions (`hard` reuses 200 of the 1,221 `single`+`multi` descriptions).
 
 ---
 

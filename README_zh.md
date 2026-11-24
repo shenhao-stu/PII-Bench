@@ -1,15 +1,22 @@
 # PII-Bench：面向查询感知隐私保护系统的评估基准（ACL 2026）
 
+[![Conference](https://img.shields.io/badge/ACL-2026-blue.svg)](#引用)
+[![Dataset](https://img.shields.io/badge/Dataset-2%2C842%20Samples-green.svg)](#数据集统计)
+[![HuggingFace](https://img.shields.io/badge/HuggingFace-shenhao%2FPII--Bench-yellow.svg)](https://huggingface.co/datasets/shenhao/PII-Bench)
+[![ModelScope](https://img.shields.io/badge/ModelScope-shenhao23%2FPII--Bench-purple.svg)](https://modelscope.cn/datasets/shenhao23/PII-Bench)
+[![License: Data CC BY 4.0](https://img.shields.io/badge/Data%20License-CC%20BY%204.0-lightgrey.svg)](LICENSE)
+[![License: Code Apache 2.0](https://img.shields.io/badge/Code%20License-Apache%202.0-lightgrey.svg)](LICENSE)
+
 **[English](README.md)** | 中文
 
 本仓库为 ACL 2026 论文官方数据集与评测代码仓库：
-> **PII-Bench: Evaluating Query-Aware Privacy Protection Systems**
-> 沈豪（Hao Shen）、顾周洪（Zhouhong Gu）、洪浩凯（HaoKai Hong）、韩伟力\*（Weili Han）、柴洪峰（Hongfeng Chai）
-> *复旦大学金融科技研究院 & 复旦大学数据分析与安全实验室*
 
-**官方数据集镜像：**
-- **HuggingFace：** https://huggingface.co/datasets/shenhao/PII-Bench
-- **ModelScope（魔搭社区）：** https://modelscope.cn/datasets/shenhao23/PII-Bench
+- **论文：** *PII-Bench: Evaluating Query-Aware Privacy Protection Systems* (ACL 2026)
+- **作者：** 沈豪（Hao Shen）<sup>1,2</sup>、顾周洪（Zhouhong Gu）<sup>3</sup>、洪浩凯（HaoKai Hong）<sup>1</sup>、韩伟力（Weili Han）<sup>1,2\*</sup>、柴洪峰（Hongfeng Chai）<sup>1</sup>
+- **单位：** <sup>1</sup>复旦大学金融科技研究院；<sup>2</sup>复旦大学数据分析与安全实验室；<sup>3</sup>复旦大学
+- **官方数据集镜像：**
+  - **HuggingFace（Parquet）：** https://huggingface.co/datasets/shenhao/PII-Bench
+  - **ModelScope（魔搭社区）：** https://modelscope.cn/datasets/shenhao23/PII-Bench
 
 > **持续迭代更新说明：** 本数据集处于持续维护状态，**后续将不断迭代更新**（包括但不限于未来补充扩展子集与进一步质量优化）。`data/paper_exact/` 目录（及 HuggingFace / ModelScope 的 `paper_exact` 配置）将永久冻结，以保证 ACL 2026 论文全部实验结果 **0.0000** 零误差可复现。
 
@@ -46,9 +53,10 @@
 | **PII-Multi** | 1,228 | 614 | 2.00 | 652.65 | 13.14 | 236.21 | 2.06 | 16,136 / 16,136 |
 | **PII-Hard**\* | 200 | 200 | 1.43 | 746.08 | 9.18 / 9.17 | 222.66 | 2.06 | 1,835 / 1,834 |
 | **PII-Distract** | 200 | 200 | 7.47 | 4,403.64 | 51.05 / 51.08 | 859.68 / 859.69 | 5.82 | 10,210 / 10,211 |
-| **总计** | **2,842** | **1,421** | **1.92** | **1,026.07** | **13.19** | **268.45** | **2.28** | **37,481 / 37,484** |
+| **总计** | **2,842** | **1,421\*\*** | **1.92** | **1,026.07** | **13.19** | **268.45** | **2.28** | **37,481 / 37,484** |
 
-\* `PII-Hard` 是从 `PII-Single`（114 条）和 `PII-Multi`（86 条）中抽取的困难子集，索引映射见 `data/paper_exact/hard_samples_line_numbers.json`。
+- \* `PII-Hard` 是从 `PII-Single`（114 条）和 `PII-Multi`（86 条）中抽取的困难子集，索引映射见 `data/paper_exact/hard_samples_line_numbers.json`。
+- \*\* 607（`single`）+ 614（`multi`）+ 200（`distract`）= 1,421 条不重复用户描述（`hard` 复用其中 200 条）。
 
 ---
 
