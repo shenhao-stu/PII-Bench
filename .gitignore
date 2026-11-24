@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+outputs/
+log/
+.env
+.env.*
+*.key
+*.pem
+.DS_Store
+data/paper_exact/PII_final.jsonl
+data/cleaned/pii_final.jsonl

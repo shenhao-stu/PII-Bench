@@ -1,0 +1,11 @@
+Dual License Notice for PII-Bench (ACL 2026)
+
+1. Dataset Files (`data/`, `metadata/`):
+   Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
+   https://creativecommons.org/licenses/by/4.0/
+
+2. Source Code (`eval/`, `scripts/`):
+   Licensed under the Apache License, Version 2.0 (Apache-2.0).
+   https://www.apache.org/licenses/LICENSE-2.0
+
+Copyright (c) 2026 Hao Shen, Zhouhong Gu, HaoKai Hong, Weili Han, Hongfeng Chai (Fudan University).

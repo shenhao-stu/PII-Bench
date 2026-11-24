@@ -1,0 +1,784 @@
+{
+  "schema_version": "1.1",
+  "num_coarse_types": 7,
+  "num_observed_canonical_subcategories": 54,
+  "paper_table11_defined_subcategories": 55,
+  "notes": "The paper defines 7 coarse PII types and 55 fine-grained subcategories (Table 11). 53 subcategories come directly from pii_pool.jsonl plus 1 ('Driver\\'s License') from human refinement, yielding 54 observed canonical tags in the cleaned dataset after normalizing 8 rare annotator synonym variants (19 occurrences total).",
+  "tag_normalization_map": {
+    "Employee ID": "Employee Badge Number",
+    "Employee ID Number": "Employee Badge Number",
+    "Student ID": "Student ID Number",
+    "Driver License": "Driver's License",
+    "Home Address": "Work or Home Detailed Address",
+    "Work Address": "Work or Home Detailed Address",
+    "Previous City or Region": "City or Region",
+    "Living Country": "City or Region"
+  },
+  "coarse_types": {
+    "PER": "Names of people, including full names, nicknames/aliases, and social media usernames.",
+    "CODE": "Identifying numbers and codes such as ID numbers, phone numbers, passport numbers, license plates, bank accounts, credit cards, tax numbers, employee/student IDs, IP addresses, emails, and passwords.",
+    "LOC": "Geographical locations such as street addresses, cities, regions, and countries.",
+    "ORG": "Names of organizations such as companies, schools/universities, public institutions, NGOs, and medical institutions.",
+    "DEM": "Demographic attributes such as age, gender, height, weight, nationality, ethnicity, race, religious belief, political affiliation, occupation, education level, degree, physical features, sexual orientation, health status, and blood type.",
+    "DATETIME": "Specific dates, times, or durations.",
+    "QUANTITY": "Significant numerical/financial quantities such as income, expenditure, bank balance, loan amount, bonus, credit limit, tax/social-security payments, debt ratio, yield/ROI, and credit score."
+  },
+  "subcategories": [
+    {
+      "type": "CODE",
+      "tag": "Password",
+      "paper_table11_name": "Password Hash / Password",
+      "direct_identifier": false,
+      "confidential": false,
+      "counts": {
+        "single": 128,
+        "multi": 242,
+        "hard": 24,
+        "distract": 156
+      },
+      "total_count": 550
+    },
+    {
+      "type": "CODE",
+      "tag": "Bank Account Number",
+      "paper_table11_name": "Bank Account",
+      "direct_identifier": true,
+      "confidential": false,
+      "counts": {
+        "single": 150,
+        "multi": 210,
+        "hard": 12,
+        "distract": 130
+      },
+      "total_count": 502
+    },
+    {
+      "type": "CODE",
+      "tag": "Phone Numbers",
+      "paper_table11_name": "Phone Number",
+      "direct_identifier": true,
+      "confidential": false,
+      "counts": {
+        "single": 120,
+        "multi": 202,
+        "hard": 17,
+        "distract": 160
+      },
+      "total_count": 499
+    },
+    {
+      "type": "CODE",
+      "tag": "IP Address",
+      "paper_table11_name": "IP Address",
+      "direct_identifier": false,
+      "confidential": false,
+      "counts": {
+        "single": 114,
+        "multi": 228,
+        "hard": 15,
+        "distract": 138
+      },
+      "total_count": 495
+    },
+    {
+      "type": "CODE",
+      "tag": "License Plate Number",
+      "paper_table11_name": "License Plate Number",
+      "direct_identifier": true,
+      "confidential": false,
+      "counts": {
+        "single": 118,
+        "multi": 224,
+        "hard": 18,
+        "distract": 135
+      },
+      "total_count": 495
+    },
+    {
+      "type": "CODE",
+      "tag": "Employee Badge Number",
+      "paper_table11_name": "Employee ID",
+      "direct_identifier": false,
+      "confidential": false,
+      "counts": {
+        "single": 122,
+        "multi": 192,
+        "hard": 19,
+        "distract": 151
+      },
+      "total_count": 484
+    },
+    {
+      "type": "CODE",
+      "tag": "Passport Number",
+      "paper_table11_name": "Passport Number",
+      "direct_identifier": true,
+      "confidential": false,
+      "counts": {
+        "single": 136,
+        "multi": 190,
+        "hard": 20,
+        "distract": 135
+      },
+      "total_count": 481
+    },
+    {
+      "type": "CODE",
+      "tag": "Tax Number",
+      "paper_table11_name": "Tax ID",
+      "direct_identifier": true,
+      "confidential": false,
+      "counts": {
+        "single": 116,
+        "multi": 210,
+        "hard": 23,
+        "distract": 127
+      },
+      "total_count": 476
+    },
+    {
+      "type": "CODE",
+      "tag": "ID Number",
+      "paper_table11_name": "Social Security Number / ID Number",
+      "direct_identifier": true,
+      "confidential": false,
+      "counts": {
+        "single": 100,
+        "multi": 222,
+        "hard": 21,
+        "distract": 131
+      },
+      "total_count": 474
+    },
+    {
+      "type": "CODE",
+      "tag": "Student ID Number",
+      "paper_table11_name": "Student ID",
+      "direct_identifier": false,
+      "confidential": false,
+      "counts": {
+        "single": 118,
+        "multi": 198,
+        "hard": 13,
+        "distract": 121
+      },
+      "total_count": 450
+    },
+    {
+      "type": "CODE",
+      "tag": "Credit Card Number",
+      "paper_table11_name": "Credit Card",
+      "direct_identifier": true,
+      "confidential": false,
+      "counts": {
+        "single": 124,
+        "multi": 174,
+        "hard": 23,
+        "distract": 114
+      },
+      "total_count": 435
+    },
+    {
+      "type": "CODE",
+      "tag": "Email Address",
+      "paper_table11_name": "Email Address",
+      "direct_identifier": true,
+      "confidential": false,
+      "counts": {
+        "single": 116,
+        "multi": 178,
+        "hard": 17,
+        "distract": 107
+      },
+      "total_count": 418
+    },
+    {
+      "type": "CODE",
+      "tag": "Driver's License",
+      "paper_table11_name": "Driver's License",
+      "direct_identifier": true,
+      "confidential": false,
+      "counts": {
+        "single": 2,
+        "multi": 0,
+        "hard": 0,
+        "distract": 0
+      },
+      "total_count": 2
+    },
+    {
+      "type": "DATETIME",
+      "tag": "Specific Date",
+      "paper_table11_name": "Date",
+      "direct_identifier": false,
+      "confidential": false,
+      "counts": {
+        "single": 458,
+        "multi": 910,
+        "hard": 89,
+        "distract": 557
+      },
+      "total_count": 2014
+    },
+    {
+      "type": "DATETIME",
+      "tag": "Specific Time",
+      "paper_table11_name": "Time",
+      "direct_identifier": false,
+      "confidential": false,
+      "counts": {
+        "single": 484,
+        "multi": 814,
+        "hard": 73,
+        "distract": 530
+      },
+      "total_count": 1901
+    },
+    {
+      "type": "DATETIME",
+      "tag": "Duration",
+      "paper_table11_name": "Duration",
+      "direct_identifier": false,
+      "confidential": false,
+      "counts": {
+        "single": 426,
+        "multi": 802,
+        "hard": 89,
+        "distract": 472
+      },
+      "total_count": 1789
+    },
+    {
+      "type": "DEM",
+      "tag": "Blood Type",
+      "paper_table11_name": "Blood Type",
+      "direct_identifier": false,
+      "confidential": false,
+      "counts": {
+        "single": 96,
+        "multi": 208,
+        "hard": 31,
+        "distract": 121
+      },
+      "total_count": 456
+    },
+    {
+      "type": "DEM",
+      "tag": "Weight",
+      "paper_table11_name": "Weight",
+      "direct_identifier": false,
+      "confidential": false,
+      "counts": {
+        "single": 98,
+        "multi": 156,
+        "hard": 45,
+        "distract": 118
+      },
+      "total_count": 417
+    },
+    {
+      "type": "DEM",
+      "tag": "Physical Characteristics",
+      "paper_table11_name": "Physical Features",
+      "direct_identifier": false,
+      "confidential": false,
+      "counts": {
+        "single": 78,
+        "multi": 188,
+        "hard": 22,
+        "distract": 117
+      },
+      "total_count": 405
+    },
+    {
+      "type": "DEM",
+      "tag": "Education Level",
+      "paper_table11_name": "Education Level",
+      "direct_identifier": false,
+      "confidential": false,
+      "counts": {
+        "single": 80,
+        "multi": 188,
+        "hard": 24,
+        "distract": 102
+      },
+      "total_count": 394
+    },
+    {
+      "type": "DEM",
+      "tag": "Height",
+      "paper_table11_name": "Height",
+      "direct_identifier": false,
+      "confidential": false,
+      "counts": {
+        "single": 92,
+        "multi": 164,
+        "hard": 19,
+        "distract": 115
+      },
+      "total_count": 390
+    },
+    {
+      "type": "DEM",
+      "tag": "Health Status",
+      "paper_table11_name": "Medical Condition",
+      "direct_identifier": false,
+      "confidential": true,
+      "counts": {
+        "single": 74,
+        "multi": 176,
+        "hard": 15,
+        "distract": 93
+      },
+      "total_count": 358
+    },
+    {
+      "type": "DEM",
+      "tag": "Occupation or Job Title",
+      "paper_table11_name": "Occupation",
+      "direct_identifier": false,
+      "confidential": false,
+      "counts": {
+        "single": 70,
+        "multi": 164,
+        "hard": 8,
+        "distract": 94
+      },
+      "total_count": 336
+    },
+    {
+      "type": "DEM",
+      "tag": "Nationality",
+      "paper_table11_name": "Nationality",
+      "direct_identifier": false,
+      "confidential": false,
+      "counts": {
+        "single": 80,
+        "multi": 142,
+        "hard": 12,
+        "distract": 94
+      },
+      "total_count": 328
+    },
+    {
+      "type": "DEM",
+      "tag": "Degree",
+      "paper_table11_name": "Academic Degree",
+      "direct_identifier": false,
+      "confidential": false,
+      "counts": {
+        "single": 96,
+        "multi": 132,
+        "hard": 13,
+        "distract": 85
+      },
+      "total_count": 326
+    },
+    {
+      "type": "DEM",
+      "tag": "Faith",
+      "paper_table11_name": "Religious Belief",
+      "direct_identifier": false,
+      "confidential": true,
+      "counts": {
+        "single": 84,
+        "multi": 144,
+        "hard": 20,
+        "distract": 73
+      },
+      "total_count": 321
+    },
+    {
+      "type": "DEM",
+      "tag": "Sexual Orientation",
+      "paper_table11_name": "Sexual Orientation",
+      "direct_identifier": false,
+      "confidential": true,
+      "counts": {
+        "single": 70,
+        "multi": 144,
+        "hard": 14,
+        "distract": 84
+      },
+      "total_count": 312
+    },
+    {
+      "type": "DEM",
+      "tag": "Gender",
+      "paper_table11_name": "Gender",
+      "direct_identifier": false,
+      "confidential": false,
+      "counts": {
+        "single": 64,
+        "multi": 146,
+        "hard": 21,
+        "distract": 77
+      },
+      "total_count": 308
+    },
+    {
+      "type": "DEM",
+      "tag": "Race",
+      "paper_table11_name": "Race",
+      "direct_identifier": false,
+      "confidential": true,
+      "counts": {
+        "single": 60,
+        "multi": 154,
+        "hard": 8,
+        "distract": 86
+      },
+      "total_count": 308
+    },
+    {
+      "type": "DEM",
+      "tag": "Ethnicity",
+      "paper_table11_name": "Ethnicity",
+      "direct_identifier": false,
+      "confidential": true,
+      "counts": {
+        "single": 62,
+        "multi": 136,
+        "hard": 13,
+        "distract": 83
+      },
+      "total_count": 294
+    },
+    {
+      "type": "DEM",
+      "tag": "Age",
+      "paper_table11_name": "Age",
+      "direct_identifier": false,
+      "confidential": false,
+      "counts": {
+        "single": 38,
+        "multi": 122,
+        "hard": 11,
+        "distract": 66
+      },
+      "total_count": 237
+    },
+    {
+      "type": "DEM",
+      "tag": "Political Stance",
+      "paper_table11_name": "Political Affiliation",
+      "direct_identifier": false,
+      "confidential": true,
+      "counts": {
+        "single": 80,
+        "multi": 86,
+        "hard": 10,
+        "distract": 59
+      },
+      "total_count": 235
+    },
+    {
+      "type": "LOC",
+      "tag": "City or Region",
+      "paper_table11_name": "City/Region",
+      "direct_identifier": false,
+      "confidential": false,
+      "counts": {
+        "single": 628,
+        "multi": 798,
+        "hard": 224,
+        "distract": 546
+      },
+      "total_count": 2196
+    },
+    {
+      "type": "LOC",
+      "tag": "Work or Home Detailed Address",
+      "paper_table11_name": "Street Address",
+      "direct_identifier": true,
+      "confidential": false,
+      "counts": {
+        "single": 422,
+        "multi": 718,
+        "hard": 81,
+        "distract": 461
+      },
+      "total_count": 1682
+    },
+    {
+      "type": "ORG",
+      "tag": "Non-Governmental Organization Name",
+      "paper_table11_name": "NGO",
+      "direct_identifier": false,
+      "confidential": false,
+      "counts": {
+        "single": 320,
+        "multi": 534,
+        "hard": 61,
+        "distract": 387
+      },
+      "total_count": 1302
+    },
+    {
+      "type": "ORG",
+      "tag": "Public Institution Name",
+      "paper_table11_name": "Government Agency / Public Institution",
+      "direct_identifier": false,
+      "confidential": false,
+      "counts": {
+        "single": 330,
+        "multi": 506,
+        "hard": 56,
+        "distract": 321
+      },
+      "total_count": 1213
+    },
+    {
+      "type": "ORG",
+      "tag": "School Name",
+      "paper_table11_name": "Educational Institution",
+      "direct_identifier": false,
+      "confidential": false,
+      "counts": {
+        "single": 320,
+        "multi": 500,
+        "hard": 45,
+        "distract": 337
+      },
+      "total_count": 1202
+    },
+    {
+      "type": "ORG",
+      "tag": "Company Name",
+      "paper_table11_name": "Company Name",
+      "direct_identifier": false,
+      "confidential": false,
+      "counts": {
+        "single": 296,
+        "multi": 530,
+        "hard": 32,
+        "distract": 314
+      },
+      "total_count": 1172
+    },
+    {
+      "type": "ORG",
+      "tag": "Medical Institution Name",
+      "paper_table11_name": "Healthcare Facility",
+      "direct_identifier": false,
+      "confidential": false,
+      "counts": {
+        "single": 322,
+        "multi": 474,
+        "hard": 57,
+        "distract": 314
+      },
+      "total_count": 1167
+    },
+    {
+      "type": "PER",
+      "tag": "Social Media Username",
+      "paper_table11_name": "Social Media Handle",
+      "direct_identifier": false,
+      "confidential": false,
+      "counts": {
+        "single": 426,
+        "multi": 908,
+        "hard": 108,
+        "distract": 536
+      },
+      "total_count": 1978
+    },
+    {
+      "type": "PER",
+      "tag": "Name",
+      "paper_table11_name": "Full Name",
+      "direct_identifier": true,
+      "confidential": false,
+      "counts": {
+        "single": 400,
+        "multi": 802,
+        "hard": 88,
+        "distract": 453
+      },
+      "total_count": 1743
+    },
+    {
+      "type": "PER",
+      "tag": "Nickname",
+      "paper_table11_name": "Nickname",
+      "direct_identifier": false,
+      "confidential": false,
+      "counts": {
+        "single": 388,
+        "multi": 746,
+        "hard": 90,
+        "distract": 460
+      },
+      "total_count": 1684
+    },
+    {
+      "type": "QUANTITY",
+      "tag": "Debt-to-Asset Ratio",
+      "paper_table11_name": "Debt Ratio",
+      "direct_identifier": false,
+      "confidential": false,
+      "counts": {
+        "single": 128,
+        "multi": 214,
+        "hard": 20,
+        "distract": 151
+      },
+      "total_count": 513
+    },
+    {
+      "type": "QUANTITY",
+      "tag": "Credit Limit",
+      "paper_table11_name": "Credit Limit",
+      "direct_identifier": false,
+      "confidential": false,
+      "counts": {
+        "single": 122,
+        "multi": 200,
+        "hard": 17,
+        "distract": 150
+      },
+      "total_count": 489
+    },
+    {
+      "type": "QUANTITY",
+      "tag": "Annual Yield",
+      "paper_table11_name": "Investment Return",
+      "direct_identifier": false,
+      "confidential": false,
+      "counts": {
+        "single": 138,
+        "multi": 194,
+        "hard": 20,
+        "distract": 126
+      },
+      "total_count": 478
+    },
+    {
+      "type": "QUANTITY",
+      "tag": "Monthly Expenditure",
+      "paper_table11_name": "Monthly Expenses",
+      "direct_identifier": false,
+      "confidential": false,
+      "counts": {
+        "single": 118,
+        "multi": 198,
+        "hard": 27,
+        "distract": 127
+      },
+      "total_count": 470
+    },
+    {
+      "type": "QUANTITY",
+      "tag": "Monthly Income",
+      "paper_table11_name": "Monthly Income",
+      "direct_identifier": false,
+      "confidential": false,
+      "counts": {
+        "single": 140,
+        "multi": 174,
+        "hard": 20,
+        "distract": 132
+      },
+      "total_count": 466
+    },
+    {
+      "type": "QUANTITY",
+      "tag": "Year-end Bonus",
+      "paper_table11_name": "Annual Bonus",
+      "direct_identifier": false,
+      "confidential": false,
+      "counts": {
+        "single": 132,
+        "multi": 182,
+        "hard": 19,
+        "distract": 133
+      },
+      "total_count": 466
+    },
+    {
+      "type": "QUANTITY",
+      "tag": "Personal Income Tax Amount",
+      "paper_table11_name": "Tax Payment",
+      "direct_identifier": false,
+      "confidential": false,
+      "counts": {
+        "single": 130,
+        "multi": 182,
+        "hard": 26,
+        "distract": 119
+      },
+      "total_count": 457
+    },
+    {
+      "type": "QUANTITY",
+      "tag": "Bank Balance",
+      "paper_table11_name": "Account Balance",
+      "direct_identifier": false,
+      "confidential": false,
+      "counts": {
+        "single": 100,
+        "multi": 194,
+        "hard": 21,
+        "distract": 123
+      },
+      "total_count": 438
+    },
+    {
+      "type": "QUANTITY",
+      "tag": "Loan Amount",
+      "paper_table11_name": "Loan Amount",
+      "direct_identifier": false,
+      "confidential": false,
+      "counts": {
+        "single": 88,
+        "multi": 206,
+        "hard": 27,
+        "distract": 117
+      },
+      "total_count": 438
+    },
+    {
+      "type": "QUANTITY",
+      "tag": "Return on Investment",
+      "paper_table11_name": "ROI",
+      "direct_identifier": false,
+      "confidential": false,
+      "counts": {
+        "single": 118,
+        "multi": 192,
+        "hard": 18,
+        "distract": 107
+      },
+      "total_count": 435
+    },
+    {
+      "type": "QUANTITY",
+      "tag": "Social Security Payment Amount",
+      "paper_table11_name": "Social Security Payment",
+      "direct_identifier": false,
+      "confidential": false,
+      "counts": {
+        "single": 110,
+        "multi": 178,
+        "hard": 12,
+        "distract": 116
+      },
+      "total_count": 416
+    },
+    {
+      "type": "QUANTITY",
+      "tag": "Credit Score",
+      "paper_table11_name": "Credit Score",
+      "direct_identifier": false,
+      "confidential": false,
+      "counts": {
+        "single": 70,
+        "multi": 60,
+        "hard": 7,
+        "distract": 49
+      },
+      "total_count": 186
+    }
+  ]
+}
